@@ -8,5 +8,7 @@ const router = express.Router();
 // Handle /movies.json route with index action from movies controller
 router.route('/station.json')
   .get(index);
+// router.post('/book', (req,res) => {
 
+// });
 module.exports =  router;

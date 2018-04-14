@@ -1,15 +1,18 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-// Define movie schema
+// Define station schema schema
 var stationSchema = new Schema({
   station: {
     type: String,
-    unique: true,
   },
-  poster: String,
   location: String,
-  days: Array,
-  times: Array,
+  date: {
+    type: Date,
+    default: Date.now
+  },
+  time:String,
+  status:Boolean,
+  userno:Number
 });
 
 // Export Mongoose model
