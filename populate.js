@@ -1,96 +1,96 @@
 const mongoose = require('mongoose');
-const Movie = require('./models/movie');
+const Station = require('./models/station');
 
-const movies = [
+const stations = [
   {
-    title: 'La La Land',
+    station: 'station 1',
     poster: 'https://i.imgur.com/po7UezG.jpg',
-    genre: 'Drama/Romance',
+    location: 'west delhi',
   },
   {
-    title: 'Paterson',
+    station: 'station 2',
     poster: 'https://i.imgur.com/pE0C9E0.jpg',
-    genre: 'Drama/Comedy',
+    location: 'south delhi',
   },
   {
-    title: 'Jackie',
+    station: 'station 3',
     poster: 'https://i.imgur.com/VqUi1sw.jpg',
-    genre: 'Drama/Biography',
+    location: 'north delhi',
   },
   {
-    title: 'Lo and Behold Reveries of the Connected World',
+    station: 'station 4',
     poster: 'https://i.imgur.com/s106X7S.jpg',
-    genre: 'Documentary',
+    location: 'central delhi',
   },
   {
-    title: '10 Cloverfield Lane',
+    station: 'station 5',
     poster: 'https://i.imgur.com/kV2BVdH.jpg',
-    genre: 'Drama',
+    location: 'east delhi',
   },
   {
-    title: 'Birth of a Nation',
+    station: 'station 6',
     poster: 'https://i.imgur.com/a6HJj8S.jpg',
-    genre: 'Fantasy/Myster',
+    location: 'central delhi',
   },
   {
-    title: 'De Palma',
+    station: 'station 7',
     poster: 'https://i.imgur.com/oOIa73M.jpg',
-    genre: 'Documentary',
+    location: 'north delhi',
   },
   {
-    title: 'Doctor Strange',
+    station: 'station 8',
     poster: 'https://i.imgur.com/kyHDVOk.jpg',
-    genre: 'Fantasy/Science Fiction',
+    location: 'south delhi ',
   },
   {
-    title: 'Eddie the Eagle',
+    station: 'station 8',
     poster: 'https://i.imgur.com/GNrdAuF.jpg',
-    genre: 'Drama/Sport',
+    location: 'east delhi',
   },
   {
-    title: 'Pride and prejudice and zombies',
+    station: 'station 10',
     poster: 'https://i.imgur.com/KhbG0Lw.jpg',
-    genre: 'Thriller/Action',
+    location: 'west delhi',
   },
   {
-    title: 'Finding Dory',
+    station: 'station 11',
     poster: 'https://i.imgur.com/BTexHYJ.jpg',
-    genre: 'Comedy/Adventure',
+    location: 'south delhi',
   },
   {
-    title: 'Green Room',
+    station: 'station 12',
     poster: 'https://i.imgur.com/Q0Ysh7L.jpg',
-    genre: 'Crime/Thriller',
+    location: 'east delhi',
   },
   {
-    title: 'Kubo and the Two Strings',
+    station: 'station 13',
     poster: 'https://i.imgur.com/uTFCKZc.jpg',
-    genre: 'Fantasy/Adventure',
+    location: 'north delhi',
   },
   {
-    title: 'In a Valley of Violence',
+    station: 'station 14',
     poster: 'https://i.imgur.com/DTtJ62G.jpg',
-    genre: 'Drama/Western',
+    location: 'west delhi',
   },
   {
-    title: 'O.J.: Made in America',
+    station: 'station 15',
     poster: 'https://i.imgur.com/T8uc6x8.jpg',
-    genre: 'Documentary',
+    location: 'central delhi',
   },
   {
-    title: 'Rogue One: A Star Wars Story',
+    station: 'station 16',
     poster: 'https://i.imgur.com/zOF2iYc.jpg',
-    genre: 'Science Fiction/Action',
+    location: 'east delhi',
   },
   {
-    title: 'Sing Street',
+    station: 'station 17',
     poster: 'https://i.imgur.com/C3ExEb6.jpg',
-    genre: 'Drama/Romance',
+    location:'south delhi',
   },
   {
-    title: 'Zoolander 2',
+    station: 'station 18',
     poster: 'https://i.imgur.com/ejlIijD.jpg',
-    genre: 'Comedy',
+    location: 'west delhi',
   },
 ];
 
@@ -101,10 +101,10 @@ mongoose.connect('mongodb://harshit:scooby1234@ds257077.mlab.com:57077/social-de
   .then(() => console.log('MongoDB Connected yeah...'))
   .catch(err => console.log(err));
 //Go through each movie
-movies.map(data => {
+stations.map(data => {
   // Initialize a model with movie data
-  const movie = new Movie(data);
+  const station = new Station(data);
   // and save it into the database
-  movie.save();
+  station.save();
 });
-module.exports = movies;
+module.exports = stations;

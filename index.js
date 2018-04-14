@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const router = require('./router');
 
  require('./populate');
+ require('./controllers/stations');
 // Connect to MongoDB
 mongoose.connect('mongodb://harshit:scooby1234@ds257077.mlab.com:57077/social-dev', {
   useMongoClient: true
