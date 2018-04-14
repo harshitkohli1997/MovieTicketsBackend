@@ -94,13 +94,17 @@ const movies = [
   },
 ];
 
-// Connect to MongoDB
-mongoose.connect('mongodb://localhost/movies');
-
-// Go through each movie
+//Connect to MongoDB
+mongoose.connect('mongodb://harshit:scooby1234@ds257077.mlab.com:57077/social-dev', {
+  useMongoClient: true
+})
+  .then(() => console.log('MongoDB Connected yeah...'))
+  .catch(err => console.log(err));
+//Go through each movie
 movies.map(data => {
   // Initialize a model with movie data
   const movie = new Movie(data);
   // and save it into the database
   movie.save();
 });
+module.exports = movies;
